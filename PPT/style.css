@@ -1,0 +1,79 @@
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.puntuacion {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#maquina {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    margin-left: 15px;
+}
+
+#victorias {
+    color: blue;
+}
+
+#derrotas {
+    color: red;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button {
+    margin: 20px 20px 20px 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 40px;
+}
+
+#rock {
+    background-color: #ff0000;
+}
+
+#paper {
+    background-color: #2196f3;
+}
+
+#scissors {
+    background-color: #4caf50;
+}
