@@ -1,3 +1,4 @@
+/* Estilos base para el body y nav */
 body {
     display: flex;
     flex-direction: column;
@@ -15,54 +16,65 @@ nav {
     color: white;
 }
 
-#resultado{
+#resultado {
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white; /* Añadido para asegurar que el color del texto sea blanco */
 }
 
 #reiniciar {
     background-color: green;
     color: white;
+    font-size: 24px; /* Tamaño de fuente ajustado */
+    padding: 10px 20px; /* Ajuste del padding */
+    margin: 15px;
+    cursor: pointer;
+    border: none; /* Sin borde */
 }
 
 .button-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    max-width: 600px; /* Ancho máximo para limitar el tamaño en pantallas grandes */
+    width: 100%; /* Ancho completo para adaptarse al contenedor */
+    margin-top: 20px; /* Margen superior añadido */
+    margin-bottom: 20px; /* Margen inferior añadido */
 }
 
 .button-container input[type="button"] {
-    height: 225px;
-    width: 225px;
-    font-size: 210px;
+    height: 150px; /* Altura ajustada para que quepan en dispositivos móviles */
+    width: 150px; /* Ancho ajustado para que quepan en dispositivos móviles */
+    font-size: 48px; /* Tamaño de fuente ajustado */
     cursor: pointer;
     background-color: green;
-
+    border: none; /* Sin borde */
 }
 
 .puntuacion {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center; /* Alinear texto al centro */
 }
 
 p {
     color: white;
-
-    align-items: center;
-    justify-content: center;
+    margin: 5px 0; /* Ajuste del margen */
 }
 
 #victorias {
     color: blue;
+    font-size: 24px; /* Tamaño de fuente ajustado */
+    margin-bottom: 10px; /* Margen inferior ajustado */
 }
 
 #derrotas {
     color: red;
-}
-
-#reiniciar {
-    margin: 15px;
+    font-size: 24px; /* Tamaño de fuente ajustado */
+    margin-bottom: 10px; /* Margen inferior ajustado */
 }

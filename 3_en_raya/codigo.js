@@ -11,7 +11,6 @@ const buttons = document.querySelectorAll('.button-container input[type="button"
 // Obtener referencias a los elementos del DOM
 const buttonReiniciar = document.getElementById('reiniciar');
 
-// Función para comparar los valores del botón 0 y el botón 1
 function verificarGanador() {
     if ((buttons[0].value === buttons[1].value && buttons[0].value === buttons[2].value && buttons[0].value === "X") ||
         (buttons[3].value === buttons[4].value && buttons[3].value === buttons[5].value && buttons[3].value === "X") ||
@@ -21,9 +20,10 @@ function verificarGanador() {
         (buttons[0].value === buttons[4].value && buttons[0].value === buttons[8].value && buttons[0].value === "X") ||
         (buttons[2].value === buttons[4].value && buttons[2].value === buttons[6].value && buttons[2].value === "X")) {
         resultado.textContent = `TU GANAS!!`;
-
+     
         victorias++;
         putuacionJ.textContent = victorias;
+        setTimeout(reiniciarPartida, 1500); // reinicia después de 1.5 segundos
     } else if ((buttons[0].value === buttons[1].value && buttons[0].value === buttons[2].value && buttons[0].value === "0") ||
         (buttons[3].value === buttons[4].value && buttons[3].value === buttons[5].value && buttons[3].value === "0") ||
         (buttons[6].value === buttons[7].value && buttons[6].value === buttons[8].value && buttons[6].value === "0") ||
@@ -34,10 +34,12 @@ function verificarGanador() {
         resultado.textContent = `HAZ PERDIDO!!`;
         derrotas++;
         putuacionM.textContent = derrotas;
+        setTimeout(reiniciarPartida, 1500); // reinicia después de 1.5 segundos
     } else if ((buttons[0].value != "" && buttons[1].value != "" && buttons[2].value != "" && buttons[3].value != "" &&
         buttons[4].value != "" && buttons[5].value != "" && buttons[6].value != "" && buttons[7].value != "" && buttons[8].value != ""
     )) {
         resultado.textContent = `EMPATE`;
+        setTimeout(reiniciarPartida, 1500); // reinicia después de 1.5 segundos
     }
 }
 
