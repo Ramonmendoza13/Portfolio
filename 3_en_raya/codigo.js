@@ -18,7 +18,8 @@ function verificarGanador() {
         (buttons[0].value === buttons[3].value && buttons[0].value === buttons[6].value && buttons[0].value === "X") ||
         (buttons[1].value === buttons[4].value && buttons[1].value === buttons[7].value && buttons[1].value === "X") ||
         (buttons[0].value === buttons[4].value && buttons[0].value === buttons[8].value && buttons[0].value === "X") ||
-        (buttons[2].value === buttons[4].value && buttons[2].value === buttons[6].value && buttons[2].value === "X")) {
+        (buttons[2].value === buttons[4].value && buttons[2].value === buttons[6].value && buttons[2].value === "X") ||
+        (buttons[2].value === buttons[5].value && buttons[2].value === buttons[8].value && buttons[2].value === "X")) {
         resultado.textContent = `TU GANAS!!`;
      
         victorias++;
@@ -30,7 +31,8 @@ function verificarGanador() {
         (buttons[0].value === buttons[3].value && buttons[0].value === buttons[6].value && buttons[0].value === "0") ||
         (buttons[1].value === buttons[4].value && buttons[1].value === buttons[7].value && buttons[1].value === "0") ||
         (buttons[0].value === buttons[4].value && buttons[0].value === buttons[8].value && buttons[0].value === "0") ||
-        (buttons[2].value === buttons[4].value && buttons[2].value === buttons[6].value && buttons[2].value === "0")) {
+        (buttons[2].value === buttons[4].value && buttons[2].value === buttons[6].value && buttons[2].value === "0") ||
+        (buttons[2].value === buttons[5].value && buttons[2].value === buttons[8].value && buttons[2].value === "0")) {
         resultado.textContent = `HAZ PERDIDO!!`;
         derrotas++;
         putuacionM.textContent = derrotas;

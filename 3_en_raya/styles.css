@@ -1,4 +1,4 @@
-/* Estilos base para el body y nav */
+/* Estilos base para el body y header */
 body {
     display: flex;
     flex-direction: column;
@@ -9,11 +9,38 @@ body {
     background-color: black;
 }
 
-nav {
-    font-size: 40px;
+header {
+    font-size: 24px; /* Tamaño de fuente reducido para el título */
     margin-top: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     color: white;
+    text-align: center; /* Centrar el texto del título */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Ancho máximo para pantallas más grandes */
+    width: 100%; /* Ancho completo para adaptarse al contenedor */
+}
+
+/* Estilos para la sección de puntuación */
+.puntuacion {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para mejor disposición */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ancho completo para adaptarse al contenedor */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.puntuacion p {
+    color: white;
+    margin: 5px 0; /* Ajuste del margen */
 }
 
 #resultado {
@@ -27,54 +54,50 @@ nav {
 #reiniciar {
     background-color: green;
     color: white;
-    font-size: 24px; /* Tamaño de fuente ajustado */
+    font-size: 18px; /* Tamaño de fuente ajustado */
     padding: 10px 20px; /* Ajuste del padding */
     margin: 15px;
     cursor: pointer;
     border: none; /* Sin borde */
 }
 
+#victorias{
+    color: blue;
+}
+
+#derrotas{
+    color: red;
+}
+
+/* Estilos para el contenedor de botones */
 .button-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 600px; /* Ancho máximo para limitar el tamaño en pantallas grandes */
+    gap: 15px; /* Aumentada la separación entre las filas */
     width: 100%; /* Ancho completo para adaptarse al contenedor */
-    margin-top: 20px; /* Margen superior añadido */
-    margin-bottom: 20px; /* Margen inferior añadido */
+    margin-top: 10px; /* Margen superior añadido */
+    margin-bottom: 20px; /* Margen inferior ajustado */
 }
 
 .button-container input[type="button"] {
-    height: 150px; /* Altura ajustada para que quepan en dispositivos móviles */
-    width: 150px; /* Ancho ajustado para que quepan en dispositivos móviles */
-    font-size: 48px; /* Tamaño de fuente ajustado */
+    height: 160px; /* Altura ajustada para que quepan en dispositivos móviles */
+    width: 160px; /* Ancho ajustado para que quepan en dispositivos móviles */
+    font-size: 100px; /* Tamaño de fuente aumentado */
     cursor: pointer;
     background-color: green;
     border: none; /* Sin borde */
 }
 
-.puntuacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Espaciado inferior */
-    text-align: center; /* Alinear texto al centro */
-}
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .button-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px; /* Reducido el espacio entre las filas */
+    }
 
-p {
-    color: white;
-    margin: 5px 0; /* Ajuste del margen */
-}
-
-#victorias {
-    color: blue;
-    font-size: 24px; /* Tamaño de fuente ajustado */
-    margin-bottom: 10px; /* Margen inferior ajustado */
-}
-
-#derrotas {
-    color: red;
-    font-size: 24px; /* Tamaño de fuente ajustado */
-    margin-bottom: 10px; /* Margen inferior ajustado */
+    .button-container input[type="button"] {
+        height: 120px; /* Altura ajustada para que quepan en dispositivos móviles */
+        width: 120px; /* Ancho ajustado para que quepan en dispositivos móviles */
+        font-size: 75px; /* Tamaño de fuente ajustado */
+    }
 }
