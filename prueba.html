@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Pulsaciones</title>
+</head>
+<body>
+    <button id="myButton">Pulsa aquí</button>
+    <p>Pulsaciones: <span id="count">0</span></p>
+
+    <script>
+        // Inicializar el contador
+        let count = 0;
+
+        // Obtener referencias a los elementos del DOM
+        const button = document.getElementById('myButton');
+        const countDisplay = document.getElementById('count');
+
+        // Agregar un listener al botón para contar las pulsaciones
+        button.addEventListener('click', function() {
+            // Incrementar el contador
+            count++;
+
+            // Actualizar la visualización del contador
+            countDisplay.textContent = count;
+        });
+    </script>
+</body>
+</html>
