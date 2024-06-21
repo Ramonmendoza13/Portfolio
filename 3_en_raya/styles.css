@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+    background-color: black;
+}
+
+nav {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+#resultado{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reiniciar {
+    background-color: green;
+    color: white;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.button-container input[type="button"] {
+    height: 225px;
+    width: 225px;
+    font-size: 210px;
+    cursor: pointer;
+    background-color: green;
+
+}
+
+.puntuacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#victorias {
+    color: blue;
+}
+
+#derrotas {
+    color: red;
+}
+
+#reiniciar {
+    margin: 15px;
+}
