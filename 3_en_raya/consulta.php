@@ -1,13 +1,13 @@
 <?php
-// Datos de conexión
-$servername = "monorail.proxy.rlwy.net";
-$username = "root";
-$password = "ulTunNKyqFNUmXFaQnCdSeZiEYsGCOqj";
-$dbname = "railway";
-$port = 11367;
+    // Datos de conexión
+    $servername = "roundhouse.proxy.rlwy.net";
+    $username = "root";
+    $password = "ccYTjbxMMIqKraGNOSooeIzCsOhCtKDB";
+    $dbname = "railway";
+    $port = 59391;
 
-// Crear conexión
-$enlace = mysqli_connect($servername, $username, $password, $dbname, $port);
+    // Crear conexión
+    $enlace = mysqli_connect($servername, $username, $password, $dbname, $port);
 
 // Verificar la conexión
 if (!$enlace) {
