@@ -10,73 +10,101 @@ body {
 }
 
 header {
-    font-size: 24px; /* Tamaño de fuente reducido para el título */
+    font-size: 24px;
     margin-top: 15px;
     margin-bottom: 20px;
     color: white;
-    text-align: center; /* Centrar el texto del título */
+    text-align: center;
 }
 
 /* Estilos para el contenedor principal */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alineación inicial de los elementos */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+aside.rules, aside.record {
+    color: white;
+    width: 20%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.rules h2, .record h2 {
+    font-size: 18px;
+}
+
+.rules ul, .record ol {
+    padding-left: 20px;
+}
+
+.rules li, .record li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor central del juego */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 800px; /* Ancho máximo para pantallas más grandes */
-    width: 100%; /* Ancho completo para adaptarse al contenedor */
+    flex-grow: 1;
+    margin: 0 20px;
 }
 
 /* Estilos para la sección de puntuación */
 .puntuacion {
     display: flex;
-    flex-direction: column; /* Cambiado a columna para mejor disposición */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Ancho completo para adaptarse al contenedor */
-    margin-bottom: 20px; /* Espaciado inferior */
-    text-align: center; /* Alinear texto al centro */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .puntuacion p {
     color: white;
-    margin: 5px 0; /* Ajuste del margen */
+    margin: 5px 0;
 }
 
 #resultado {
     margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Añadido para asegurar que el color del texto sea blanco */
+    color: white;
 }
 
-#reiniciar {
+#reiniciar, #acabar {
     background-color: green;
     color: white;
-    font-size: 18px; /* Tamaño de fuente ajustado */
-    padding: 10px 20px; /* Ajuste del padding */
+    font-size: 18px;
+    padding: 10px 20px;
     margin: 15px;
     cursor: pointer;
-    border: none; /* Sin borde */
+    border: none;
 }
 
-#victorias{
+#victorias {
     color: blue;
 }
 
-#derrotas{
+#derrotas {
     color: red;
 }
 
 /* Estilos para el contenedor de botones */
 .button-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px; /* Aumentada la separación entre las filas */
+    grid-template-columns: repeat(3, auto); /* Cambiado a 'auto' para ajustar el ancho automáticamente */
+    gap: 10px; /* Ajuste la separación entre los botones */
     width: 100%; /* Ancho completo para adaptarse al contenedor */
     margin-top: 10px; /* Margen superior añadido */
     margin-bottom: 20px; /* Margen inferior ajustado */
+    justify-content: center; /* Centrar los botones horizontalmente */
 }
 
 .button-container input[type="button"] {
@@ -90,14 +118,25 @@ header {
 
 @media (max-width: 768px) {
     /* Estilos para dispositivos móviles */
+    .main-layout {
+        flex-direction: column;
+        align-items: center; /* Centrar elementos verticalmente en dispositivos móviles */
+    }
+
+    aside.rules, aside.record {
+        width: 100%;
+        max-width: unset; /* Eliminar el ancho máximo para que ocupen todo el ancho disponible */
+        margin: 10px 0;
+    }
+
     .button-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px; /* Reducido el espacio entre las filas */
+        grid-template-columns: repeat(3, 120px); /* Ajuste para botones más espaciados */
+        gap: 20px; /* Aumentar el espacio entre los botones */
     }
 
     .button-container input[type="button"] {
-        height: 120px; /* Altura ajustada para que quepan en dispositivos móviles */
-        width: 120px; /* Ancho ajustado para que quepan en dispositivos móviles */
-        font-size: 75px; /* Tamaño de fuente ajustado */
+        height: 120px;
+        width: 120px;
+        font-size: 75px;
     }
 }
