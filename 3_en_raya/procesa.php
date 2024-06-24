@@ -4,11 +4,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero = isset($_POST['numero']) ? $_POST['numero'] : '';
 
     // Datos de conexión
-    $servername = "monorail.proxy.rlwy.net";
+    $servername = "roundhouse.proxy.rlwy.net";
     $username = "root";
-    $password = "ulTunNKyqFNUmXFaQnCdSeZiEYsGCOqj";
+    $password = "ccYTjbxMMIqKraGNOSooeIzCsOhCtKDB";
     $dbname = "railway";
-    $port = 11367;
+    $port = 59391;
 
     // Crear conexión
     $enlace = mysqli_connect($servername, $username, $password, $dbname, $port);
